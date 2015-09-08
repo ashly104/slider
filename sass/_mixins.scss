@@ -1,0 +1,8 @@
+@mixin square($s){
+	@include box($s, $s);
+}
+
+@mixin box($w, $h) {
+	width: $w;
+	height: $h;
+}

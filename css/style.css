@@ -1,0 +1,283 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@keyframes rtl-enter {
+  /* line 2, ../sass/_animation.scss */
+  0% {
+    transform: translateX(221px);
+  }
+
+  /* line 5, ../sass/_animation.scss */
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rtl-leave {
+  /* line 11, ../sass/_animation.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 14, ../sass/_animation.scss */
+  100% {
+    transform: translateX(-221px);
+  }
+}
+
+/* line 19, ../sass/_animation.scss */
+.rtl-enter {
+  animation: rtl-enter 0.5s ease both;
+}
+
+/* line 23, ../sass/_animation.scss */
+.rtl-leave {
+  animation: rtl-leave 0.5s ease both;
+}
+
+@keyframes ltr-enter {
+  /* line 31, ../sass/_animation.scss */
+  0% {
+    transform: translateX(-221px);
+  }
+
+  /* line 34, ../sass/_animation.scss */
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ltr-leave {
+  /* line 40, ../sass/_animation.scss */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* line 43, ../sass/_animation.scss */
+  100% {
+    transform: translateX(221px);
+  }
+}
+
+/* line 48, ../sass/_animation.scss */
+.ltr-enter {
+  animation: ltr-enter 0.5s ease both;
+}
+
+/* line 52, ../sass/_animation.scss */
+.ltr-leave {
+  animation: ltr-leave 0.5s ease both;
+}
+
+/* line 13, ../sass/style.scss */
+.viewport {
+  margin: 100px auto;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  width: 241px;
+  height: 281px;
+}
+/* line 20, ../sass/style.scss */
+.viewport .images {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 221px;
+  height: 221px;
+}
+/* line 26, ../sass/style.scss */
+.viewport .images li {
+  position: absolute;
+  z-index: 2;
+}
+/* line 30, ../sass/style.scss */
+.viewport .images li.active {
+  z-index: 5;
+}
+/* line 34, ../sass/style.scss */
+.viewport .images li.next-active {
+  z-index: 4;
+}
+/* line 39, ../sass/style.scss */
+.viewport .images img {
+  vertical-align: top;
+}
+/* line 44, ../sass/style.scss */
+.viewport .indicator {
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 0;
+}
+/* line 49, ../sass/style.scss */
+.viewport .indicator li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0 3px;
+}
+/* line 58, ../sass/style.scss */
+.viewport .indicator li.active {
+  border-color: #bbb;
+  background: #bbb;
+  cursor: default;
+}
+
+/* line 66, ../sass/style.scss */
+.container {
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid gray;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: black;
+}
+
+/* line 76, ../sass/style.scss */
+.image-slider-wrapper {
+  overflow: hidden;
+}
+
+/* line 79, ../sass/style.scss */
+#image_slider {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  padding: 0;
+  left: 0;
+}
+
+/* line 86, ../sass/style.scss */
+#image_slider li {
+  position: relative;
+  max-width: 100%;
+  float: left;
+  list-style: none;
+  left: 0;
+}
+
+/* line 95, ../sass/style.scss */
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+
+/* line 100, ../sass/style.scss */
+input[type="radio"] + label .fa-circle,
+input[type="checkbox"] + label .fa-check {
+  display: none;
+}
+
+/* Styling the "check" status */
+/* line 105, ../sass/style.scss */
+input[type="radio"]:checked + label .fa-circle,
+input[type="checkbox"]:checked + label .fa-check {
+  display: block;
+  color: DarkTurquoise;
+}
+
+/* Styling checkboxes */
+/* line 110, ../sass/style.scss */
+input[type="checkbox"]:checked + label .fa-check {
+  position: relative;
+  left: .125em;
+  bottom: .125em;
+}
+
+/* Styling radiobuttons */
+/* line 116, ../sass/style.scss */
+input[type="radio"]:checked + label .fa-circle-o {
+  display: none;
+}
+
+/* line 119, ../sass/style.scss */
+.styled-select select {
+  background: transparent;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+}
+
+/* line 130, ../sass/style.scss */
+.styled-select {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  background: url(../arrow.jpg) no-repeat right #dddddd;
+  border: 1px solid #ccc;
+}

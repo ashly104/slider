@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+<p align="center">
+<div class="styled-select">
+    <select id="converted_dropdown_2" class="styled-select">
+        <option value="0">apples</option>
+        <option value="1">oranges</option>
+        <option value="2">bananas</option>
+        <option value="3">strawberries</option>
+        <option value="4">raspberries</option>
+        <option value="5">melons</option>
+        <option value="6">grapes</option>
+        <option value="7">tangerines</option>
+    </select>
+    <input id="button1" type="button" value="Click!" />
+    </div>
+</p>
+
+
+</body>
+<script type="text/javascript">
+    var se = $('<p>').appendTo('body');
+    var sel = $('<li>').appendTo('body');
+    var sele = $('<select>').appendTo('body');
+    $(document).ready(function() {
+        $('#button1').click(function () {
+            var value = $('#converted_dropdown_2 :selected').text();
+            var val = document.getElementById("converted_dropdown_2");
+            var strUser = val.options[val.selectedIndex].value;
+            //console.log(value);
+            //console.log(strUser);
+            var obj = {Name: value, id: strUser};
+            console.log(obj);
+
+
+            $(obj).each(function() {
+                se.append($("<span>").attr('value',val).text(value));
+                sel.append($("<ul>").attr('value',val).text(value));
+                sele.append($("<option>").attr('value',val).text(value));
+            });
+        });
+    });
+</script>
+</html>
